@@ -18,14 +18,14 @@ def Create_Robot():
     pyrosim.Start_URDF("body.urdf")
     x = 0;
     y = 0;
-    z = 2.5
+    z = 1.5
     pyrosim.Send_Cube(name="Torso", pos=[x, y, z], size=[length, width, height])
-    pyrosim.Send_Joint(name="Torso_BackLeg", parent="Torso", child="BackLeg", type="revolute", position=[-.5, 0, 2])
+    pyrosim.Send_Joint(name="Torso_BackLeg", parent="Torso", child="BackLeg", type="revolute", position=[-.5, 0, 1])
     x = -.5;
     y = 0;
     z = -.5
     pyrosim.Send_Cube(name="BackLeg", pos=[x, y, z], size=[length, width, height])
-    pyrosim.Send_Joint(name="Torso_FrontLeg", parent="Torso", child="FrontLeg", type="revolute", position=[.5, 0, 2])
+    pyrosim.Send_Joint(name="Torso_FrontLeg", parent="Torso", child="FrontLeg", type="revolute", position=[.5, 0, 1])
     x = .5;
     y = 0;
     z = -.5
